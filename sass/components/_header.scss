@@ -16,13 +16,26 @@
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
+  // font-size: 26px;
+  // line-height: 1.19;
   color: var(--logo-color);
+
+  @media screen and (min-width: 1200px) {
+      font-size: 26px;
+      line-height: 1.19;
+    }
+
 }
 
 .header__logo {
-  margin-right: 93px;
+
+  // margin-right: 93px;
+  
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 
 .logo__accent {
@@ -50,13 +63,17 @@
 }
 
 .menu {
-  display: flex;
+  display: none;
+  // display: flex;
   column-gap: 50px;
 }
 
 .link.current {
-  position: relative;
   color: var(--accent-color);
+
+@media screen and (min-width: 1200px) {
+    position: relative;;
+  }
 }
 
 .current::after {
@@ -72,7 +89,8 @@
 }
 
 .connect {
-  display: flex;
+  display: none;
+  // display: flex;
   gap: 50px;
 }
 
@@ -101,3 +119,5 @@
 .connect__icon {
   fill: currentColor;
 }
+
+// -------------mobile-menu-------------//

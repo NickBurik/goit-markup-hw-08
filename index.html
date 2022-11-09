@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!-- <header class="page-header">
+    <header class="page-header">
       <div class="container page-header__container">
         <nav class="navigator">
           <a class="logo header__logo link" href="./index.html" lang="en"
@@ -37,6 +37,11 @@
             <li><a class="menu__item link" href="#">Контакти</a></li>
           </ul>
         </nav>
+        <button type="button" data-menu-open class="open-mobile-btn">
+          <svg class="open-mobile-btn_icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu-mob"></use>
+          </svg>
+        </button>
         <ul class="connect list">
           <li class="connect__item">
             <a class="connect__mail link" href="mailto:info@devstudio.com">
@@ -56,7 +61,35 @@
           </li>
         </ul>
       </div>
-    </header> -->
+      <div class="mobile-menu" data-menu>
+        <div class="mobile-menu__container">
+          <button type="button" class="mobile-menu__close-btn" data-menu-close>
+          <svg class="mobile-menu__close-icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-close-mob"></use>
+          </svg>
+        </button>
+        <div >
+          <ul class="mobile-menu__list list">
+            <li class="mobile-menu__item"><a class="mobile-menu__link link current" href="./index.html">Студія</a></li>
+            <li class="mobile-menu__item"><a class="mobile-menu__link link" href="./portfolio.html">Портфоліо</a></li>
+            <li class="mobile-menu__item"><a class="mobile-menu__link link" href="#">Контакти</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="mobile-menu__contact list">
+            <li class="mobile-menu__contact-item"><a class="mobile-menu__contact-tel link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+            <li class="mobile-menu__contact-item"><a class="mobile-menu__contact-mail link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+          </ul>
+          <ul class="mobile-menu__social list">
+            <li class="mobile-menu__social-item"><a class="mobile-menu__social-link link" href="#">Instagram</a></li>
+            <li class="mobile-menu__social-item"><a class="mobile-menu__social-link link" href="#">Twitter</a></li>
+            <li class="mobile-menu__social-item"><a class="mobile-menu__social-link link" href="#">Facebook</a></li>
+            <li class="mobile-menu__social-item"><a class="mobile-menu__social-link link" href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </header>
     <main>
       <section class="hero">
         <div class="hero__container container">
@@ -748,8 +781,7 @@
             <label for="privecy" class="check-text">
               <span>
                 <svg class="check-icon" width="16" height="15">
-                  <use href="./images/icons.svg#icon-icon-check"></use></svg
-              ></span>
+                  <use href="./images/icons.svg#icon-icon-check"></use></svg></span>
               Погоджуюся з розсилкою та приймаю<a href="#" class="policy"
                 >Умови договору</a
               ></label
@@ -761,5 +793,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

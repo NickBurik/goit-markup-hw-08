@@ -7,16 +7,11 @@
     margin-bottom: 20px;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 1.17;
-    // font-size: 26px;
-    // line-height: 1.19;
+    // font-size: 24px;
+    // line-height: 1.17;
     color: var(--footer-logo-color);
     margin-right: 0;
-    @media screen and (min-width: 1200px) {
-      font-size: 26px;
-      line-height: 1.19;
-    }
+    
   }
 }
 
@@ -29,7 +24,6 @@
   }
   @media screen and (min-width: 1200px) {
     align-items: baseline;
-
   }
 }
 
@@ -48,7 +42,6 @@
   @media screen and (min-width: 1200px) {
     margin-right: 70px;
   }
-  // margin-right: 70px;
 }
 
 .contacts-address {
@@ -134,9 +127,10 @@
 
 .footer-subscribe {
   text-align: center;
-  // margin-left: 93px;
+
   @media screen and (min-width: 1200px) {
     margin-left: 93px;
+    text-align: left;
   }
 }
 
@@ -154,19 +148,17 @@
 .footer-form {
   display: flex;
   align-items: center;
-  
-@media screen and (max-width: 1199px) {
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 20px;
-  width: 100%;
-}
 
+  @media screen and (max-width: 1199px) {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+  }
 }
 
 .footer-sub-email {
   padding: 15px 16px;
-  // width: 358px;
   width: 100%;
   background-color: inherit;
   outline: transparent;

@@ -291,6 +291,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .section {
+    display: block;
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -330,13 +331,21 @@ body {
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   color: var(--logo-color);
 }
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
 
-.header__logo {
-  margin-right: 93px;
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    margin-right: 93px;
+  }
 }
 
 .logo__accent {
@@ -363,14 +372,18 @@ body {
 }
 
 .menu {
-  display: flex;
+  display: none;
   -moz-column-gap: 50px;
        column-gap: 50px;
 }
 
 .link.current {
-  position: relative;
   color: var(--accent-color);
+}
+@media screen and (min-width: 1200px) {
+  .link.current {
+    position: relative;
+  }
 }
 
 .current::after {
@@ -386,7 +399,7 @@ body {
 }
 
 .connect {
-  display: flex;
+  display: none;
   gap: 50px;
 }
 
@@ -415,6 +428,143 @@ body {
 
 .connect__icon {
   fill: currentColor;
+}
+
+.open-mobile-btn {
+  line-height: 0;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .open-mobile-btn {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  background-color: var(--page-bg-color);
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms var(--primati-time-function), visibility 250ms var(--primati-time-function);
+}
+
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  overflow: scroll;
+}
+
+.mobile-menu__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding: 48px 80px 48px 40px;
+  height: 100vh;
+}
+
+.mobile-menu__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  line-height: 0;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.mobile-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 50px;
+}
+
+.mobile-menu__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
+}
+
+.mobile-menu__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+.mobile-menu__contact-tel {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+@media screen and (min-width: 480px) {
+  .mobile-menu__contact-tel {
+    font-size: 34px;
+  }
+}
+
+.mobile-menu__contact-mail {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--primari-text-color);
+}
+@media screen and (min-width: 480px) {
+  .mobile-menu__contact-mail {
+    font-size: 24px;
+  }
+}
+
+.mobile-menu__social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+@media screen and (min-width: 480px) {
+  .mobile-menu__social {
+    flex-wrap: nowrap;
+  }
+}
+
+.mobile-menu__social-item:not(:last-child) {
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: rgba(33, 33, 33, 0.2);
+  padding-right: 5px;
+}
+@media screen and (min-width: 480px) {
+  .mobile-menu__social-item:not(:last-child) {
+    padding-right: 10px;
+  }
+}
+
+.mobile-menu__social-link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+@media screen and (min-width: 480px) {
+  .mobile-menu__social-link {
+    font-size: 18px;
+  }
 }
 
 .hero {
@@ -467,8 +617,13 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  width: 360px;
+  width: 100%;
   color: var(--page-bg-color);
+}
+@media screen and (min-width: 480px) {
+  .hero__title {
+    width: 360px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
@@ -862,16 +1017,8 @@ body {
   margin-bottom: 20px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 1.17;
   color: var(--footer-logo-color);
   margin-right: 0;
-}
-@media screen and (min-width: 1200px) {
-  .footer .logo {
-    font-size: 26px;
-    line-height: 1.19;
-  }
 }
 
 .oll-footer {
@@ -997,6 +1144,7 @@ body {
 @media screen and (min-width: 1200px) {
   .footer-subscribe {
     margin-left: 93px;
+    text-align: left;
   }
 }
 
