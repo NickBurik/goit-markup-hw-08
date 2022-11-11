@@ -642,36 +642,36 @@ body {
   padding: 118px 0;
   text-align: center;
   background-color: #c4c4c4;
-  background-image: var(--hero-gradient), url(/images/hero-img/Hero-mob.jpg);
+  background-image: var(--hero-gradient), url(./images/hero-img/Hero-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: var(--hero-gradient), url(/images/hero-img/Hero-mob-x2.jpg);
+    background-image: var(--hero-gradient), url(./images/hero-img/Hero-mob-x2.jpg);
   }
 }
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: var(--hero-gradient), url(/images/hero-img/Hero-tab.jpg);
+    background-image: var(--hero-gradient), url(./images/hero-img/Hero-tab.jpg);
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: var(--hero-gradient), url(/images/hero-img/Hero-tab-x2.jpg);
+    background-image: var(--hero-gradient), url(./images/hero-img/Hero-tab-x2.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
     padding: 200px 0;
     max-width: 1600px;
-    background-image: var(--hero-gradient), url(/images/hero-img/hero-bg-desctop.jpg);
+    background-image: var(--hero-gradient), url(./images/hero-img/hero-bg-desctop.jpg);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: var(--hero-gradient), url(/images/hero-img/hero-bg-desctop-x2.jpg);
+    background-image: var(--hero-gradient), url(./images/hero-img/hero-bg-desctop-x2.jpg);
   }
 }
 
