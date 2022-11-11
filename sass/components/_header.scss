@@ -18,21 +18,19 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 1.17;
-  // font-size: 26px;
-  // line-height: 1.19;
   color: var(--logo-color);
 
   @media screen and (min-width: 1200px) {
-      font-size: 26px;
-      line-height: 1.19;
-    }
-
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .header__logo {
+  @media screen and (min-width: 768px) {
+    margin-right: 87px;
+  }
 
-  // margin-right: 93px;
-  
   @media screen and (min-width: 1200px) {
     margin-right: 93px;
   }
@@ -64,15 +62,20 @@
 
 .menu {
   display: none;
-  // display: flex;
-  column-gap: 50px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
 }
 
 .link.current {
   color: var(--accent-color);
 
-@media screen and (min-width: 1200px) {
-    position: relative;;
+  @media screen and (min-width: 1200px) {
+    position: relative;
   }
 }
 
@@ -90,8 +93,18 @@
 
 .connect {
   display: none;
-  // display: flex;
-  gap: 50px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  }
 }
 
 .connect__item:last-child {
@@ -100,19 +113,26 @@
 
 .connect__mail,
 .connect__tel {
-  display: flex;
-  gap: 10px;
   align-items: center;
-  justify-content: center;
   font-weight: 500;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--primari-text-color);
-  padding: 32px 0;
+
   transition: color 250ms var(--primati-time-function);
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    font-size: 14px;
+    line-height: 1.14;
+    padding: 32px 0;
+    gap: 10px;
+    justify-content: center;
   }
 }
 
@@ -120,4 +140,3 @@
   fill: currentColor;
 }
 
-// -------------mobile-menu-------------//
