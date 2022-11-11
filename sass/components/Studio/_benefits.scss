@@ -4,8 +4,6 @@
     padding-top: 94px;
     padding-bottom: 47px;
   }     
-  // padding-top: 94px;
-  // padding-bottom: 47px;
 }
 
 .benefits {
@@ -15,7 +13,6 @@
 }
 
 .benefits__items {
-  // flex-basis: calc(100% - 90px / 4);
   &::before {
     display: block;
     content: "";
