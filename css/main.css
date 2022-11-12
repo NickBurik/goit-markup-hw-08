@@ -226,6 +226,11 @@
 .input-check:focus + .check-text span {
   border-color: var(--accent-color);
 }
+@media screen and (max-width: 479px) {
+  .check-text {
+    justify-content: center;
+  }
+}
 @media screen and (min-width: 480px) {
   .check-text {
     font-size: 12px;
@@ -346,6 +351,13 @@ body {
 .page-header {
   border-bottom: 1px solid #ececec;
 }
+@media screen and (max-width: 767px) {
+  .page-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+  }
+}
 
 .page-header__container {
   display: flex;
@@ -395,6 +407,7 @@ body {
   color: var(--title-text-color);
   padding: 32px 0;
   transition: color 250ms var(--primati-time-function);
+  position: relative;
 }
 .menu__item:hover, .menu__item:focus {
   color: var(--accent-color);
@@ -463,6 +476,7 @@ body {
 
 .connect__mail,
 .connect__tel {
+  display: flex;
   align-items: center;
   font-weight: 500;
   font-size: 12px;
@@ -490,6 +504,21 @@ body {
 
 .connect__icon {
   fill: currentColor;
+  margin-right: 8px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .connect__icon--mail {
+    width: 14px;
+    height: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .connect__icon--phone {
+    width: 10px;
+    height: 12px;
+  }
 }
 
 .open-mobile-btn {
@@ -927,7 +956,6 @@ body {
 .clients {
   padding-top: 94px;
   padding-bottom: 94px;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -949,17 +977,17 @@ body {
 }
 
 .clients-icon-list {
-  width: 210px;
+  flex-basis: calc((100% - 30px) / 2);
   height: 92px;
 }
 @media screen and (min-width: 768px) {
   .clients-icon-list {
-    max-width: 226px;
+    flex-basis: calc((100% - 60px) / 3);
   }
 }
 @media screen and (min-width: 1200px) {
   .clients-icon-list {
-    max-width: 170px;
+    flex-basis: calc((100% - 150px) / 6);
   }
 }
 
@@ -1174,7 +1202,6 @@ body {
 @media screen and (max-width: 767px) {
   .social-footer {
     text-align: center;
-    margin-bottom: 60px;
   }
 }
 
@@ -1320,6 +1347,9 @@ body {
   }
 }
 
+.footer__top-parts {
+  margin-bottom: 60px;
+}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer__top-parts {
     display: flex;

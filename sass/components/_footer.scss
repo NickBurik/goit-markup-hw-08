@@ -91,7 +91,6 @@
 .social-footer {
   @media screen and (max-width: 767px) {
     text-align: center;
-    margin-bottom: 60px;
   }
 }
 
@@ -217,6 +216,7 @@
 }
 
 .footer__top-parts {
+  margin-bottom: 60px;
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: flex;
     justify-content: space-around;

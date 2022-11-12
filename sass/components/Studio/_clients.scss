@@ -1,7 +1,6 @@
 .clients {
   padding-top: 94px;
   padding-bottom: 94px;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -23,13 +22,13 @@
 }
 
 .clients-icon-list {
-  width: 210px;
+  flex-basis: calc((100% - 30px)/2);
   height: 92px;
   @media screen and (min-width: 768px) {
-    max-width: 226px;
+    flex-basis: calc((100% - 60px)/3);
   }
 @media screen and (min-width: 1200px) {
-    max-width: 170px;
+    flex-basis: calc((100% - 150px)/6);
   }
 }
 
