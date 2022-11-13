@@ -146,6 +146,9 @@
 .connect__icon {
   fill: currentColor;
   margin-right: 8px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 0;
+  }
 }
 
 .connect__icon--mail {
